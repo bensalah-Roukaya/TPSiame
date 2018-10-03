@@ -20,8 +20,8 @@ class Temperature(object):
      
      
 def on_connect(self, client, userdata,flags, rc):
-  	 if(rc != 0 ): return
-    	self.client.subscribe('R1/014/temperature/command');
+    if(rc != 0 ): return
+    self.client.subscribe('R1/014/temperature/command');
 
 def sendData(self):
   "'sending temperatures'"

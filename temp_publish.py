@@ -9,13 +9,11 @@ class Temperature(object):
   client = None
 
   def sendData(self):
-  "'sending temperatures'"
 
-  jsonFrame= dict();
-  jsonFrame['unitID'] = '60:30:d4:7e:b0:02'|'MacBook-Air-de-Roukaya.local'
-  jsonFrame['temperature'] = '10'
-  
-  res, mid = self.client.publish( 'R1/014/temperature/command', json.dumps(jsonFrame))
+   jsonFrame= dict();
+   jsonFrame['unitID'] = '02:00:c0:a8:00:11'|'vm-dyn-0-211.siame.univ-tlse3.fr'
+   jsonFrame['temperature'] = '10'
+   res, mid = self.client.publish( 'R1/014/temperature/command', json.dumps(jsonFrame))
 
-  temperature = Temperature()
-  temperature.sendData()
+   temperature = Temperature()
+   temperature.sendData()
